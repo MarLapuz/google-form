@@ -1,0 +1,72 @@
+$google-blue : #4885ed;
+$google-red : #db3236; 
+$google-yellow : #f4c20d; 
+$google-green : #3cba54;
+$black : #000;
+$white : #FFF;
+$navbar-bg : #F0F0F0;
+$font-color : #5F5F5F;
+$font-family : 'Quicksand', sans-serif;
+$header-text : 5vh;
+$content-header : 15pt;
+
+@mixin form {
+  border-color: $google-blue;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $google-blue;
+  outline: 0 none;
+}
+
+@mixin nav-bottom {
+  background-image: linear-gradient(to right, $google-blue 25%, $google-red 25%, $google-yellow 50%, $google-green 50%, $google-blue 75%, $google-red 25%, $google-yellow 50%, $google-red 50%);
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  background: $white;
+  color: $font-color;
+  }
+
+.font-color { color: $google-blue; }
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  @include form;
+}
+
+.navbar {
+  padding: 10px 0 0 15px;
+  margin-bottom: 0 
+}
+
+.navbar-bg { background-color: $navbar-bg; }
+
+.header-text { font-size: $header-text; }
+
+.content-header { font-size: $content-header;}
+
+.navbar-border{ @include nav-bottom; }
+
+.btn-primary { background-color: $google-blue; }
+
